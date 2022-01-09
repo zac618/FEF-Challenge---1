@@ -6,15 +6,17 @@
 // https://www.w3schools.com/js/js_cookies.asp
 // https://morioh.com/p/86545e1a5365
 
-
 // BREAKDOWN
 
-// Allow a user to create cookies 
+// Allow a user to create cookies
 // Allow user to edit cookies
 // Allow user to remove cookies
 // Allow user to display cookies
 
-// Create Cookie from user input 
+// Create Cookie from user input
 // Get user input and store in a cookie
 // document.cookie
 
+
+
+HTML HAS INPUT BUT I NEED TO FIGURE OUT HOW TO STORE DATA A USER INPUTS
