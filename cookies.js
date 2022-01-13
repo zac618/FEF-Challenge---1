@@ -17,6 +17,28 @@
 // Get user input and store in a cookie
 // document.cookie
 
+// HTML HAS INPUT BUT I NEED TO FIGURE OUT HOW TO STORE DATA A USER INPUTS
 
+//let cName = window.prompt('Enter your name');
 
-HTML HAS INPUT BUT I NEED TO FIGURE OUT HOW TO STORE DATA A USER INPUTS
+// function newCookie() {
+// 	let li = document.createElement('li');
+// }
+
+// document.cookie = 'userId=zac12345';
+
+// const cookies = document.cookie;
+
+// console.log(cookies);
+
+//function newCookie() {
+const inputValue = document.querySelector('#myInput');
+const createBtn = document.querySelector('#cookie-add');
+
+createBtn.addEventListener('click', () => {
+	const ul = divList.querySelector('cookiesUL');
+	const li = document.createElement('li');
+	li.innerHTML = inputValue.value;
+	ul.appendChild(li);
+});
+//}
