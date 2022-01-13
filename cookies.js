@@ -31,14 +31,24 @@
 
 // console.log(cookies);
 
-//function newCookie() {
-const inputValue = document.querySelector('#myInput');
-const createBtn = document.querySelector('#cookie-add');
+const cookies = document.getElementsByClassName('cookies')[0];
+const create = document.getElementById('addButton');
+const allItems = document.getElementById('allItems');
+const userInput = document.getElementById('userInput');
 
-createBtn.addEventListener('click', () => {
-	const ul = divList.querySelector('cookiesUL');
-	const li = document.createElement('li');
-	li.innerHTML = inputValue.value;
-	ul.appendChild(li);
+create.addEventListener('click', function() {
+	allItems.innerHTML = '';
 });
-//}
+
+userInput.addEventListener('keydown', function(event) {
+	if (event.key == 'Enter') addItem();
+});
+
+function addItem() {
+	let h2 = document.createElement('h2');
+	h2.innerHTML = '- ' + userInput.value;
+
+	allItems.insertAdjacentElement('beforeend', h2);
+
+	userInput.value = '';
+}
