@@ -32,11 +32,11 @@
 // console.log(cookies);
 
 const cookies = document.getElementsByClassName('cookies')[0];
-const create = document.getElementById('addButton');
+const dlt = document.getElementById('deleteBtn');
 const allItems = document.getElementById('allItems');
 const userInput = document.getElementById('userInput');
 
-create.addEventListener('click', function() {
+dlt.addEventListener('click', function() {
 	allItems.innerHTML = '';
 });
 
