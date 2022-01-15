@@ -1,54 +1,35 @@
-// Create a site that allows the user to to create, edit, remove and
-// display cookies. Host your solution in a public Github repo. Present
-// your work to the server on 01/23/22 at 8PM UTC
+// I'll need to create some cookies that auto-populate to start with
+// Buttons: Create, Edit, Delete, Display
+// Each button prompts a pop-up asking you a question
+// From there, you create a cookie and name it (set the value), edit a cookie (change value), or delete the cookie
+// Display will simply display all available cookies
 
-// Resources
-// https://www.w3schools.com/js/js_cookies.asp
-// https://morioh.com/p/86545e1a5365
+//
+//
+//
+//
+//
+//
+// WORKING CODE FOR LIST ADDING APP
 
-// BREAKDOWN
+// const cookies = document.getElementsByClassName('cookies')[0];
+// const dlt = document.getElementById('deleteBtn');
+// const allItems = document.getElementById('allItems');
+// const userInput = document.getElementById('userInput');
 
-// Allow a user to create cookies
-// Allow user to edit cookies
-// Allow user to remove cookies
-// Allow user to display cookies
+// dlt.addEventListener('click', function() {
+// 	allItems.innerHTML = '';
+// });
 
-// Create Cookie from user input
-// Get user input and store in a cookie
-// document.cookie
+// userInput.addEventListener('keydown', function(event) {
+// 	if (event.key == 'Enter') addItem();
+// });
 
-// HTML HAS INPUT BUT I NEED TO FIGURE OUT HOW TO STORE DATA A USER INPUTS
+// function addItem() {
+// 	let h2 = document.createElement('h2');
+// 	h2.innerHTML = '- ' + userInput.value;
 
-//let cName = window.prompt('Enter your name');
+// 	allItems.insertAdjacentElement('beforeend', h2);
 
-// function newCookie() {
-// 	let li = document.createElement('li');
+// 	userInput.value = '';
 // }
-
-// document.cookie = 'userId=zac12345';
-
-// const cookies = document.cookie;
-
-// console.log(cookies);
-
-const cookies = document.getElementsByClassName('cookies')[0];
-const dlt = document.getElementById('deleteBtn');
-const allItems = document.getElementById('allItems');
-const userInput = document.getElementById('userInput');
-
-dlt.addEventListener('click', function() {
-	allItems.innerHTML = '';
-});
-
-userInput.addEventListener('keydown', function(event) {
-	if (event.key == 'Enter') addItem();
-});
-
-function addItem() {
-	let h2 = document.createElement('h2');
-	h2.innerHTML = '- ' + userInput.value;
-
-	allItems.insertAdjacentElement('beforeend', h2);
-
-	userInput.value = '';
-}

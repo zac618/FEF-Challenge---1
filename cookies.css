@@ -5,7 +5,7 @@
 
 body{
   font-family:Arial, Helvetica, sans-serif;
-  background-color: rgb(93, 118, 231);
+  background-color: rgb(0, 47, 255);
 }
 
 .container{
@@ -31,8 +31,11 @@ body{
 }
 
 .cookies button{
-  font-size: 1rem;
-  color: blue;
+  font-size: 2rem;
+  color: rgb(0, 47, 255);
+  margin-top: 25px;
+  display:flex;
+  width: 70%;
 }
 
 .cookies input{
