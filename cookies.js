@@ -4,19 +4,27 @@
 // From there, you create a cookie and name it (set the value), edit a cookie (change value), or delete the cookie
 // Display will simply display all available cookies
 
-
 // const create = document.getElementById("createBtn");
 // const edit = document.getElementById("editBtn");
 // const deleteBtn = document.getElementById("deleteBtn");
 // const display = document.getElementById("displayBtn");
 
 document.querySelector('#createBtn').addEventListener('click', function() {
-    let newCookieValue = prompt("Input value for your cookie");
+	let newCookieName = prompt('Input name for your cookie');
+	let newCookieValue = prompt('Input value for your cookies');
+	//let addedCookie = document.cookie;
 
-    let newCookie = newCookieValue
-    console.log(newCookie)
-})
+	addedCookie = ` ${newCookieName} = ${newCookieValue}`;
+	console.log(newCookieName);
+	console.log(newCookieValue);
+	console.log(addedCookie);
 
+	document.cookie = `${addedCookie}`;
+});
+
+document.querySelector('#editBtn').addEventListener('click', function() {
+	let updateCookieName = prompt('Which cookie would you like to change?');
+});
 
 //
 //
