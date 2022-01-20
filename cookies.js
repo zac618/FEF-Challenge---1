@@ -22,6 +22,15 @@ document.querySelector('#createBtn').addEventListener('click', function() {
 	document.cookie = `${addedCookie}`;
 });
 
+let table = document.createElement('table');
+let thead = document.createElement('thead');
+let tbody = document.createElement('tbody');
+
+table.appendChild(thead);
+table.appendChild(tbody);
+
+document.getElementById('body').appendChild(table);
+
 document.querySelector('#editBtn').addEventListener('click', function() {
 	let updateCookieName = prompt('Which cookie would you like to change?');
 });

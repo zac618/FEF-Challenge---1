@@ -34,6 +34,7 @@ body{
   font-size: 2rem;
   color: rgb(0, 47, 255);
   margin-top: 25px;
+  margin-bottom: 25px;
   display:flex;
   width: 70%;
 }
@@ -54,11 +55,8 @@ body{
   font-size: 2rem;
 }
 
-.table, th, tr {
-  font-family: inherit;
-  width: 70%;
-  margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: 1px solid black;
+#cookieTable, th, td {
+  padding: 10px;
+  border: 1px solid black;
+  border-collapse: collapse;
 }
