@@ -1,38 +1,39 @@
-
 document.querySelector('#createBtn').addEventListener('click', function() {
 	let newCookieName = prompt('Input name for your cookie');
-	let newCookieValue = prompt('Input value for your cookies');
+	// let newCookieValue = prompt('Input value for your cookie');
 	//let addedCookie = document.cookie;
 
-    let 
-
-	addedCookie = ` ${newCookieName} = ${newCookieValue}`;
+	// let addedCookie = ` ${newCookieName} = ${newCookieValue}`;
 	console.log(newCookieName);
-	console.log(newCookieValue);
-	console.log(addedCookie);
+	// console.log(newCookieValue);
+	// console.log(addedCookie);
 
-	document.cookie = `${addedCookie}`;
+	document.cookie = `${newCookieName}`;
 
-    function addRow(cookieTable) {
-        let tableRef = document.getElementById(cookieTable);
+                        <td><input type="button" value="Delete Row" onclick=deleteRow()></td>
 
-        let newRow = tableRef.insertRow(-1);
 
-        let newCell = newRow.insertCell(0);
 
-        let newText = document.createTextNode(`${newCookieName}`);
-        
-        let newValueCell = document.createTextNode(`${newCookieValue}`)
+	function addRow(cookieTable) {
+		let tableRef = document.getElementById(cookieTable);
 
-        newCell.appendChild(newText);
-        newValueCell.appendChild(newText);
-    }
+		let newRow = tableRef.insertRow(-1);
 
-    addRow('cookieTable');
+		let newCell = newRow.insertCell(0);
 
-    console.log(addRow);
-    
+		let newText = document.createTextNode(`${newCookieName}`);
 
+		newCell.appendChild(newText);
+	}
+
+	function deleteRow() {
+		// event.target will be the input element.
+		var td = document.newRow.parentNode;
+		var tr = td.parentNode; // the row to be removed
+		tr.parentNode.removeChild(tr);
+	}
+
+	addRow('cookieTable');
 });
 
 // let table = document.createElement('table');
