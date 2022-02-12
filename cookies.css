@@ -39,24 +39,57 @@ body{
   width: 70%;
 }
 
-.cookies input{
-  font-family: inherit;
-  outline: 0;
-  border: 0;
-  border-bottom: 3px solid black;
-  width: 70%;
-  font-size: 1.5rem;
+.cookies-table__list {
+  width: 100%;
+  border-top: 1px dashed lightgray;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-#allItems h2{
-  margin-left: 50px;
+.cookie-table__cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 1px dashed lightgray;
+}
+
+.cookie-table__cell--empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 30px;
+  border-bottom: none;
+}
+
+.cookie-table__cell p {
+  width: 100%;
+  text-align: left;
+}
+
+.cookie-table__cell button {
+  justify-content: flex-end;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
+  text-decoration: underline;
+  width: min-content;
   margin-right: 10px;
-  margin-top: 15px;
-  font-size: 2rem;
 }
 
-#Table, th, td {
-  padding: 10px;
-  border: 1px solid black;
-  border-collapse: collapse;
+.cookie-table__cell button::after {
+  content: '|';
+  pointer-events: none;
+  color:rgba(0, 0, 0, .5);
+  margin-left: 10px;
+}
+
+.cookie-table__cell button:last-of-type {
+  margin-right: 0;
+}
+
+.cookie-table__cell button:last-of-type::after {
+  content: '';
+  margin-right: 0;
 }
